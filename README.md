@@ -58,6 +58,64 @@ focus on Spring now.
 
 ##### What is Inversion Control? 
 
+* It is the design process of externalizing the construction and management of your objects
+* You outsource obect creation to an object factory - the big idea of inversion of control
+
+
+
+
+###### Coding Scenario 
+
+* We will have an app that will make use of a coach, Baseball coach. 
+* Our app will say: "Hey coach, give me a daily workout"
+* The requirement is also that the app is configurable for another sport (hockey, cricket, tennis, etc) and work with any type of coach
+
+We are about to create a prototype and it will have 4 key players:
+* myApp.java - main method
+* BaseballCoach.java
+* Coach.java - interface after refactoring 
+* TrackCoach.java
+
+
+We start with myApp.java - it just has the main method. 
+BaseballCoach.java - will have implementation.
+THEN AFTER REFACTORING, we will introduce an interface Coach.java 
+and then we will also have another implementation TrackCoach.java - introducing another coach and seeing of our application continues to work. 
+
+
+ROUGH PROTOTYPE 
+
+* Create a new package (com.luv2code.springdemo)
+* Now, we create a simple pojo - BaseballCoach.java 
+* We create one method there 
+```
+public class BaseballCoach{
+ public String getDailyWorkout() {
+  return "Spend 30 minutes on batting practice";
+ }
+}
+
+```
+
+* Now create new class MyApp.java
+
+```
+MyApp.java
+
+public class MyApp {
+ public static void main(String[] args) {
+ 
+  //create the object 
+  BaseballCoach theCoach = new BaseballCoach();
+  
+  
+  // use the object 
+  System.out.println(theCoach.getDailyWorkout());
+ }
+}
+
+```
+
 
 
 

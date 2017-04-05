@@ -204,10 +204,21 @@ public class TrackCoach implements Coach {
 
 * The other requirement is that Coach implementaiton should be configurable. Right now it is hard-coded: Coach theCoach = new TrackCoach();
 
-* Ideally we would read the implementation from the config file so we could easily swap by changing a config file instead of having to change the source code. **Spring was designed to addess this exact problem.
+* Ideally we would read the implementation from the config file so we could easily swap by changing a config file instead of having to change the source code. **Spring was designed to addess this exact problem**.
 
 
 
 ##### Spring Inversion of Control
 
-We did not have support for configuration up to this point. We will make use of ** object factory
+We did not have support for configuration up to this point. We will make use of **object factory**. Spring provides and object factory so that our application could talk to Spring, say "give me an object". Based on the config file or annotation, Spring will give you an appropriate implementation. 
+
+Spring Container
+
+Primary Funcions: create and manage objects(Inversion of Control) and Inject object's dependancies (Dependancy Injection)
+
+There are 3 ways to configure Spring Container:
+1. XML config file (legacy, but most legacy apps still use this )
+2. Java Annotations 
+3. Java Source Code
+
+

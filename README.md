@@ -147,7 +147,67 @@ public class BaseballCoach implements Coach {
 
 * Inside MyApp.java, we need to change " BaseballCoach theCoach = new BaseballCoach();" to Coach theCoach = new BaseballCoach();
 
+```
+MyApp.java
+
+public class MyApp {
+
+ public static void main(String[] args) {
+ 
+  //create the object 
+  Coach theCoach = new BaseballCoach();
+  
+  
+  // use the object 
+  System.out.println(theCoach.getDailyWorkout());
+  
+ }
+ 
+}
+```
+
+* Now we need to add the requirement of working with a different type of coach. Inside MyApp.java, change "Coach theCoach = new BaseballCoach();" to "Coach theCoach = new TrackCoach();"
+
+
+```
+MyApp.java
+
+public class MyApp {
+
+ public static void main(String[] args) {
+ 
+  //create the object 
+  Coach theCoach = new TrackCoach();
+  
+  
+  // use the object 
+  System.out.println(theCoach.getDailyWorkout());
+  
+ }
+ 
+}
+```
+
+* But we do not have a TrackCoach class yet so we get an error. Click on the error that will create TrackCoach class. The interface will be included. 
+
+```
+public class TrackCoach implements Coach {
+ 
+  @Override 
+  public String getDailyWorkout(){
+   
+   return "Run a hard 5k.";
+   
+  }
+}
+```
+
+* The other requirement is that Coach implementaiton should be configurable. Right now it is hard-coded: Coach theCoach = new TrackCoach();
+
+* Ideally we would read the implementation from the config file so we could easily swap by changing a config file instead of having to change the source code. **Spring was designed to addess this exact problem.
 
 
 
+##### Spring Inversion of Control
 
+We did not have support for configuration up to this point. We will make use of ** object factory

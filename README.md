@@ -39,8 +39,8 @@ you simply specify the wiring via configurations or annotations.
 3. Eclipse IDE 
 4. Downloading Spring JAR files 
 * Create Eclipse Project
-* Change perspective in Eclipse from Java EE: Windows -> Perspective -> Open Perspective -> Java
-* File -> New -> Java Project - name: spring-demo-one
+ * Change perspective in Eclipse from Java EE: Windows -> Perspective -> Open Perspective -> Java
+ * File -> New -> Java Project - name: spring-demo-one
 * Download Spring JAR files 
 * Download Commons Logging JAR file
 * Add JAR files to Eclipse Project ... Buld Path

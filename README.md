@@ -18,11 +18,11 @@ www.spring.io (documentation, tutorials, etc)
 
 ##### Goals of Spring
 
-Lightweight development with Java POJOs(plain old java objects)
-Dependency injection to promote loose coupling by making use dependency of injection. So instead of hardwiring your objects to get 
+* Lightweight development with Java POJOs(plain old java objects)
+* Dependency injection to promote loose coupling by making use dependency of injection. So instead of hardwiring your objects to get 
 you simply specify the wiring via configurations or annotations. 
-Declarative programming with Aspect-Oriented Programming - add some application-wide services to given objects
-Minimazie boilerplate Java code 
+* Declarative programming with Aspect-Oriented Programming - add some application-wide services to given objects
+* Minimazie boilerplate Java code 
 
 
 

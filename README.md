@@ -35,9 +35,17 @@ you simply specify the wiring via configurations or annotations.
 2. You need Java Application Server (for S MVC development) - Tomcat
 * Installing Tomcat
   * Verify installation http://localhost:8080
-  * Connect Tomcat to Eclipse: click on the tab Servers in Eclipse, click on the link, window opens and in Apache folder, find Tomcat. 
+  * Connect Tomcat to Eclipse: click on the tab Servers in Eclipse, click on the link, window opens and in Apache folder, find Tomcat
 3. Eclipse IDE 
+4. Downloading Spring JAR files 
+* Create Eclipse Project
+* Download Spring JAR files 
+* Download Commons Logging JAR file
+* Add JAR files to Eclipse Project ... Buld Path
 
+
+What about Maven? - Istead of downloading, you can use a tool like Maven. Maven will be covered at the end of the course as we
+focus on Spring now. 
 
 
 

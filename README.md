@@ -29,6 +29,15 @@ you simply specify the wiring via configurations or annotations.
 * Spring projects are additional S modules built on top of the core S Framework. Only use what you need
 * Examples: Spring social, Spring boot 
 
+##### Dev Environment Setup Overview 
+
+1. You must have JDK installed 
+2. You need Java Application Server (for S MVC development) - Tomcat
+   ** Installing Tomcat
+3. Eclipse IDE 
+
+
+
 
 
 

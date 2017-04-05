@@ -38,10 +38,14 @@ you simply specify the wiring via configurations or annotations.
   * Connect Tomcat to Eclipse: click on the tab Servers in Eclipse, click on the link, window opens and in Apache folder, find Tomcat
 3. Eclipse IDE 
 4. Downloading Spring JAR files 
-* Create Eclipse Project
- * Change perspective in Eclipse from Java EE: Windows -> Perspective -> Open Perspective -> Java
- * File -> New -> Java Project - name: spring-demo-one
-* Download Spring JAR files 
+  * Create Eclipse Project
+  * Change perspective in Eclipse from Java EE: Windows -> Perspective -> Open Perspective -> Java
+  * File -> New -> Java Project - name: spring-demo-one
+  * Download from www.love2code.com/downloadspring (this is spring repository of different versions of S)- > download the latest 
+  * In the folder that was just downloaded, find libs folder, select all JAR files and copy them
+  * Inside the project in Eclipse create a new folder named lib 
+  
+
 * Download Commons Logging JAR file
 * Add JAR files to Eclipse Project ... Buld Path
 

@@ -103,6 +103,7 @@ public class BaseballCoach{
 MyApp.java
 
 public class MyApp {
+
  public static void main(String[] args) {
  
   //create the object 
@@ -116,8 +117,35 @@ public class MyApp {
 
 ```
 
+* Now we have the requirement that this app should would with any type of Coach. We will take advantage of the Software Engineering Best Practice - Code to Interface which means instead of coding directly into BaseballCoach implementation (MyApp.java), we will make use of a well defined interface that all coaches will support.
 
+* Every coach will have a method getDailyWorkout();
 
+* Right click on project and create a new interface - name: Coach and add one method getDailyWorkout(); Interface specified what and not how. Implementations will provide the details. 
+
+```
+public interface Coach {
+ 
+ public String getDailyWorkout();
+}
+
+```
+
+* We need to re-factor BaseballCoach.java by adding "implements Coach" and add @Override - this is the method that we override 
+
+```
+public class BaseballCoach implements Coach {
+ 
+ @Override 
+ public String getDailyWorkout() {
+  
+  return "Spend 30 minutes on batting practice.";
+ }
+}
+
+```
+
+* Inside MyApp.java, we need to change " BaseballCoach theCoach = new BaseballCoach();" to Coach theCoach = new BaseballCoach();
 
 
 

@@ -1,4 +1,4 @@
-# SpringHibernateNotes
+# Spring Hibernate Notes
 
 ##### Roadmap:
 1. Set up development environment
@@ -27,6 +27,7 @@ you simply specify the wiring via configurations or annotations.
 ##### Spring Projects 
 
 * Spring projects are additional S modules built on top of the core S Framework. Only use what you need
+* Examples: Spring social, Spring boot 
 
 
 

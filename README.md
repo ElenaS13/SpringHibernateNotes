@@ -8,8 +8,8 @@
 
 ##### Why should we use Spring? (will use S for short)
 
-S is a popular framework for building enterprise Java applications
-Learn both Java EE and Spring
+* S is a popular framework for building enterprise Java applications
+* Learn both Java EE and Spring
 
 
 ##### Spring Core Framework Overview 
@@ -23,6 +23,12 @@ www.spring.io (documentation, tutorials, etc)
 you simply specify the wiring via configurations or annotations. 
 * Declarative programming with Aspect-Oriented Programming - add some application-wide services to given objects
 * Minimazie boilerplate Java code 
+
+##### Spring Projects 
+
+* Spring projects are additional S modules built on top of the core S Framework. Only use what you need
+
+
 
 
 

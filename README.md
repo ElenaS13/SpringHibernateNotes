@@ -43,7 +43,10 @@ you simply specify the wiring via configurations or annotations.
   * File -> New -> Java Project - name: spring-demo-one
   * Download from www.love2code.com/downloadspring (this is spring repository of different versions of S)- > download the latest 
   * In the folder that was just downloaded, find libs folder, select all JAR files and copy them
-  * Inside the project in Eclipse create a new folder named lib 
+  * Inside the project in Eclipse create a new folder named lib and paste the JAR files
+  * There is one more file that we need. It is Apache Commons Logging (luv2code.com/downloadlogging) - download from here 
+  * Open the downloaded folder and copy JAR file: commons-logging-1.2.jar and paste into lib folder in Eclipse 
+  * Now we need to add it to the path of our project - right click on project name and choose Properties - > select Java Build Path - Libraries tab -> Add JARS -> expand lib folder for spring-demo-one -> shift click and highlight all the jar files - click ok -> now inside the project there should be a new item called Referenced Libraries
   
 
 * Download Commons Logging JAR file
@@ -52,6 +55,8 @@ you simply specify the wiring via configurations or annotations.
 
 What about Maven? - Istead of downloading, you can use a tool like Maven. Maven will be covered at the end of the course as we
 focus on Spring now. 
+
+##### What is Inversion Control? 
 
 
 

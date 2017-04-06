@@ -222,3 +222,67 @@ There are 3 ways to configure Spring Container:
 3. Java Source Code
 
 
+##### Spring Development Process
+
+* Configure your Spring Beans
+This is done in xml file. In our case, applicationContext.xml. 
+
+<bean id="myCoach"
+      class="com.luv2code.springdemo.BaseballCoach">
+</bean>
+
+id is what will be used by Java app to retrieve bean from S container.
+Class is actual class that you will use for your application. 
+
+
+
+* Create Spring Container 
+
+Generally known as application context. 
+
+ClassPAthXmlApplicatonContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+
+
+* Retrieve Beans from Spring Container 
+
+Your application will tell the S container to give Coach object and based on the information in the config file, it will give you an implementation of that given interface. 
+
+So here is the code to retrieve bean from S container 
+
+Coach theCoach = context.getBean("myCoach", Coach.class);  //myCoach has to match whats in xml file for id. 
+
+
+
+NEXT STEP
+We are adding .xml file and configuring S beans. 
+WE define a bean with id and class. 
+
+Now we are going to make use of a Java class and we name it HelloSpringApp.java
+
+```
+public class HelloSpringApp {
+
+ public static void main(String[] args) {
+ 
+  //load the spring config file 
+  
+  ClassPAthXmlApplicatonContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+  
+  //retrieve beans from S container 
+  
+  Coach theCoach = context.getBean("myCoach", Coach.class);
+  
+  
+  //now that we have the bean, we can call methods on it 
+  
+  System.out.println(theCoach.getDailyWorkout());
+  
+  //close the app context 
+  context.close();
+  
+ }
+}
+
+```
+
+

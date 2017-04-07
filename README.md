@@ -286,3 +286,97 @@ public class HelloSpringApp {
 ```
 
 
+NOW let's change the config file and try a different implementation. In config xml file, change baseball coach to track coach and run hellospringapp.java Now trackcoach implementation is running based on the config file. 
+
+
+WHY DO WE SPECIFY THE COACH INTERFACE IN getBean()? 
+
+When we pass the interface to the method, behind the scenes S will cast the object for you. 
+context.getBean("myCoach", Coach.class);
+However, there are some slight differences than in the normal casting. 
+
+
+##### Spring Dependency Injection
+
+Spring has object factory. You retrieve and object and it might have some additional dependency. These dependancies are just helper objects. 
+
+Spring Container funcitons:
+* Create and manage objects(Inversion of Control)
+* Inject object's dependencies (Dependency Injection)
+
+Demo Example:
+Our Coach already provides daily workouts. Now will also provide daily fortunes. 
+* New helper: Fortune Service 
+* This is dependency
+* dependency = helper (coach depends on the fortuneService to serve daily fortune)
+
+There are many types of Injection in Spring:
+Common ones are Constructor Injection and Setter Injection
+
+DEVELOPMENT PROCESS - Constructor Injection 
+
+1. Define the dependency interface and class 
+
+We create an interface FortuneService and it will return a string 
+
+```
+FortuneService.java
+
+public interface FortuneService {
+
+ public String getFortune();
+}
+
+```
+NOW we create a class that implements the interface FortuneService 
+
+```
+HappyFortuneService.java
+
+public class HappyFortuneService implements FortuneService {
+ 
+  public String getFortune() {
+   return "Today is your lucky day!";
+  }
+}
+```
+
+
+
+
+
+2. Create a constructor in your class for injections 
+Inject dependencies here calling a constructor. Create a constructor that will accept a dependency. 
+
+```
+BaseballCoach.java
+
+public class BaseballCoach implements Coach {
+
+ private FortuneService fortuneService;
+ 
+ public BaseballCoach(FortuneService theFortuneService){
+   
+   fortuneService = theFortuneService;
+ 
+ }
+ 
+ 
+}
+
+```
+
+
+3. Configure the dependency injection in Spring config file 
+Define a bean inside xml file and then inject that dependency into the class. 
+
+
+
+
+
+
+
+
+
+
+

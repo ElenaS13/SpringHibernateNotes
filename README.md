@@ -284,23 +284,6 @@ public class HelloSpringApp {
 }
 
 ```
-
-
-NOW let's change the config file and try a different implementation. In config xml file, change baseball coach to track coach and run hellospringapp.java Now trackcoach implementation is running based on the config file. 
-
-
-WHY DO WE SPECIFY THE COACH INTERFACE IN getBean()? 
-
-When we pass the interface to the method, behind the scenes S will cast the object for you. 
-context.getBean("myCoach", Coach.class);
-However, there are some slight differences than in the normal casting. 
-
-
-##### Spring Dependency Injection
-
-Spring has object factory. You retrieve and object and it might have some additional dependency. These dependancies are just helper objects. 
-
-Spring Container funcitons:
 * Create and manage objects(Inversion of Control)
 * Inject object's dependencies (Dependency Injection)
 
@@ -316,7 +299,6 @@ Common ones are Constructor Injection and Setter Injection
 DEVELOPMENT PROCESS - Constructor Injection 
 
 1. Define the dependency interface and class 
-
 We create an interface FortuneService and it will return a string 
 
 ```
@@ -324,7 +306,7 @@ FortuneService.java
 
 public interface FortuneService {
 
- public String getFortune();
+ public String getFortune();    //returns a string 
 }
 
 ```
@@ -341,6 +323,38 @@ public class HappyFortuneService implements FortuneService {
 }
 ```
 
+Move to Coach interface Coach.java which right now provides daily workout and add fortuneService. 
+
+```
+public interface Coach {
+ 
+ public String getDailyWorkout();
+ 
+ public String getDailyFortune();
+ 
+}
+
+```
+
+Now we add the getDailyFortune() to BaseballCoach.java and same for TrackCoach.java 
+
+```
+public class BaseballCoach implements Coach {
+ 
+ @Override 
+ public String getDailyWorkut() {
+  return "Spend 30 minutes on batting practice";
+  
+ }
+ 
+ @Override 
+ public String getDailyFortune() {
+ 
+  return "Have a lucky day";
+ }
+}
+
+```
 
 
 
@@ -353,7 +367,7 @@ BaseballCoach.java
 
 public class BaseballCoach implements Coach {
 
- private FortuneService fortuneService;
+ private FortuneService fortuneService;  //private field for dependency
  
  public BaseballCoach(FortuneService theFortuneService){
    
@@ -361,7 +375,17 @@ public class BaseballCoach implements Coach {
  
  }
  
+ @Override 
+ public String getDailyWorkout() {
+  return "Spend 30 minutes on batting practice";
+ }
  
+ @Override 
+ public String getDailyFortune() {
+ 
+ //use the Fortune Service
+  return fortuneService.getFortune();
+ }
 }
 
 ```
@@ -370,6 +394,11 @@ public class BaseballCoach implements Coach {
 3. Configure the dependency injection in Spring config file 
 Define a bean inside xml file and then inject that dependency into the class. 
 
+
+
+>>>>>>>>>>
+
+NOW we will move into main class (HelloSpringApp.java) and make use of the beans from spring and call some methods on it. 
 
 
 

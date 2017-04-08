@@ -401,6 +401,50 @@ Define a bean inside xml file and then inject that dependency into the class.
 NOW we will move into main class (HelloSpringApp.java) and make use of the beans from spring and call some methods on it. 
 
 
+##### Setter Injection
+1. Create a setter method in your class for injections 
+
+```
+package com.love2code.springdemo;
+
+public class CricketCoach implements Coach {
+	
+	private FortuneService fortuneService;
+	
+	public CricketCoach() {
+		
+		
+	}
+	//setter method will be called by S to injects dependency
+	public void setFortuneService(FortuneService fortuneService) {
+		
+		this.fortuneService = fortuneService;
+	}
+
+	@Override
+	public String getDailyWorkout() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getDailyFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
+
+```
+
+
+
+2. Configure dependency injection in config file 
+
+When you use 'property' in config file, S will attempt to call a setter method.
+
+
+
 
 
 

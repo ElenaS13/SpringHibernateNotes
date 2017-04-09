@@ -445,9 +445,9 @@ When you use 'property' in config file, S will attempt to call a setter method.
 
 
 
+SPRING CONFIG WITH ANNOTATIONS
 
-
-
+Anntotations - meta-data about the class. 
 
 
 

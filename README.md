@@ -451,5 +451,7 @@ Anntotations - meta-data about the class.
 
 
 
+Spring will scan a package and it will register al @Components 
+
 
 

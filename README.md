@@ -459,5 +459,6 @@ Inject dependancies by calling setter methods on your class.
 Default constructor - no args constructor. 
 #####We can inject dependencies by calling ANY method on your class. Simply give @Autowired
 
-
+FIELD INJECTION
+Inject dependencies by setting field values on your calss directly. (even private fields)
 

@@ -457,6 +457,7 @@ Spring will scan a package and it will register al @Components
 SETTER INJECTION
 Inject dependancies by calling setter methods on your class. 
 Default constructor - no args constructor. 
+#####We can inject dependencies by calling ANY method on your class. Simply give @Autowired
 
 
 

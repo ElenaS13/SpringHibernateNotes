@@ -462,3 +462,25 @@ Default constructor - no args constructor.
 FIELD INJECTION
 Inject dependencies by setting field values on your calss directly. (even private fields)
 
+
+SPRING MVC 
+
+Behind the scenes. 
+
+Components of a Spring MVC App
+
+Browser sends a request to Front Controller also known as DispatecherServlet. Front Controller will delegate to other items. 
+Controller - the code that we create (business logic), then the data is placed into model and displayed by view controller. 
+
+Model- like container for shipping. JSP and JSTL - common model controllers. 
+
+
+View Template - (groovy, timeleaf)
+
+Spring MVC Configuration 
+
+1. Configure Spring MVC Dispatcher Servlet 
+2. Set up a URL mapping 
+3. Add support for Spring component scanning 
+4. Adding support for conversion, validation 
+5. Configure view resolver (how to display pages)

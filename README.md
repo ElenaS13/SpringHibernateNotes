@@ -484,3 +484,26 @@ Spring MVC Configuration
 3. Add support for Spring component scanning 
 4. Adding support for conversion, validation 
 5. Configure view resolver (how to display pages)
+
+
+CREATE CONTROLLER CLASS IN A VIEW 
+1. Create controller class
+  Create a class and annotate it with @Controller. 
+  
+  ```
+  @Controller 
+  public class HomeController {
+  	//2. Define controller method
+	
+	//3. Add Request Mappings (@RequestMapping("/"))
+	
+	@RequestMapping("/")
+	public String showPage() {
+		return "main-menu"
+		}
+  }
+  
+  ```
+5. Develop View Page 
+
+
